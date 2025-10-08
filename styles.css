@@ -18,56 +18,172 @@ body {
     padding: 0 20px;
 }
 
-/* Improved Text Readability */
+/* ENHANCED Neon Text Effects - More Prominent & Defined */
 .neon-text {
     font-family: 'Orbitron', monospace;
-    color: #00cccc;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
+    color: #00ffff;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.8rem 1.5rem;
+    border-radius: 15px;
     text-shadow: 
-        0 0 3px #00cccc,
-        0 0 6px #00cccc,
-        0 0 9px #00cccc;
-    animation: neonFlicker 3s infinite alternate;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 204, 204, 0.3);
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 15px #00ffff,
+        0 0 20px #00ffff,
+        0 0 25px #00ffff;
+    animation: neonFlicker 2s infinite alternate;
+    backdrop-filter: blur(15px);
+    border: 2px solid #00ffff;
+    box-shadow: 
+        0 0 20px rgba(0, 255, 255, 0.5),
+        inset 0 0 20px rgba(0, 255, 255, 0.1);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .neon-text-big {
     font-family: 'Orbitron', monospace;
     font-weight: 900;
-    font-size: 4rem;
-    color: #dd00dd;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 1rem 2rem;
-    border-radius: 20px;
+    font-size: 4.5rem;
+    color: #ff00ff;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.5rem 3rem;
+    border-radius: 25px;
     text-shadow: 
-        0 0 5px #dd00dd,
-        0 0 10px #dd00dd,
-        0 0 15px #dd00dd,
-        0 0 20px #dd00dd;
-    animation: neonPulse 2s infinite alternate;
-    backdrop-filter: blur(15px);
-    border: 2px solid rgba(221, 0, 221, 0.4);
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 30px #ff00ff,
+        0 0 40px #ff00ff,
+        0 0 50px #ff00ff,
+        0 0 60px #ff00ff;
+    animation: neonPulse 1.8s infinite alternate;
+    backdrop-filter: blur(20px);
+    border: 3px solid #ff00ff;
+    box-shadow: 
+        0 0 40px rgba(255, 0, 255, 0.6),
+        inset 0 0 30px rgba(255, 0, 255, 0.1);
     display: inline-block;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
 }
 
-/* Section titles with better readability */
+.neon-text-big::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+    border-radius: 30px;
+    z-index: -1;
+    opacity: 0.3;
+    animation: borderGlow 2s infinite alternate;
+}
+
+/* Section titles with STRONG neon effect */
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    font-weight: 700;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 1rem 2rem;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 204, 204, 0.3);
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    font-weight: 800;
+    font-family: 'Orbitron', monospace;
+    color: #00ffff;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1.2rem 2.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 2px solid #00ffff;
     display: inline-block;
     width: auto;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 
+        0 0 8px #00ffff,
+        0 0 16px #00ffff,
+        0 0 24px #00ffff,
+        0 0 32px #00ffff;
+    box-shadow: 
+        0 0 30px rgba(0, 255, 255, 0.4),
+        inset 0 0 20px rgba(0, 255, 255, 0.1);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff);
+    border-radius: 23px;
+    z-index: -1;
+    opacity: 0.2;
+    animation: sectionGlow 3s infinite alternate;
+}
+
+@keyframes neonFlicker {
+    0%, 100% { 
+        opacity: 1;
+        text-shadow: 
+            0 0 5px #00ffff,
+            0 0 10px #00ffff,
+            0 0 15px #00ffff,
+            0 0 20px #00ffff,
+            0 0 25px #00ffff;
+    }
+    50% { 
+        opacity: 0.95;
+        text-shadow: 
+            0 0 3px #00ffff,
+            0 0 8px #00ffff,
+            0 0 12px #00ffff,
+            0 0 16px #00ffff,
+            0 0 20px #00ffff;
+    }
+}
+
+@keyframes neonPulse {
+    0% { 
+        text-shadow: 
+            0 0 10px #ff00ff,
+            0 0 20px #ff00ff,
+            0 0 30px #ff00ff,
+            0 0 40px #ff00ff,
+            0 0 50px #ff00ff,
+            0 0 60px #ff00ff;
+        box-shadow: 
+            0 0 40px rgba(255, 0, 255, 0.6),
+            inset 0 0 30px rgba(255, 0, 255, 0.1);
+    }
+    100% { 
+        text-shadow: 
+            0 0 5px #ff00ff,
+            0 0 15px #ff00ff,
+            0 0 25px #ff00ff,
+            0 0 35px #ff00ff,
+            0 0 45px #ff00ff,
+            0 0 55px #ff00ff,
+            0 0 65px #ff00ff;
+        box-shadow: 
+            0 0 60px rgba(255, 0, 255, 0.8),
+            inset 0 0 40px rgba(255, 0, 255, 0.15);
+    }
+}
+
+@keyframes borderGlow {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.6; }
+}
+
+@keyframes sectionGlow {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.4; }
 }
 
 /* Improved text containers */
@@ -99,14 +215,21 @@ body {
 .tent-content h3,
 .booking-info h3,
 .contact-info h3 {
-    color: #00cccc;
+    color: #00ffff;
     margin-bottom: 1rem;
-    font-size: 1.3rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.8rem 1.2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 204, 204, 0.2);
+    font-size: 1.5rem;
+    font-family: 'Orbitron', monospace;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .about-text p,
@@ -139,6 +262,10 @@ body {
     padding: 0.5rem;
     border-radius: 8px;
     margin-bottom: 1rem;
+    color: #00ffff;
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    text-shadow: 0 0 5px #00ffff;
 }
 
 .about-card p,
@@ -156,6 +283,11 @@ body {
     padding: 0.8rem;
     border-radius: 10px;
     margin-bottom: 1rem;
+    color: #00ffff;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    text-shadow: 0 0 8px #00ffff;
+    font-size: 1.4rem;
 }
 
 .included-services {
@@ -184,29 +316,6 @@ body {
     margin-bottom: 1rem;
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-@keyframes neonFlicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.9; }
-}
-
-@keyframes neonPulse {
-    0% { 
-        text-shadow: 
-            0 0 5px #dd00dd,
-            0 0 10px #dd00dd,
-            0 0 15px #dd00dd,
-            0 0 20px #dd00dd;
-    }
-    100% { 
-        text-shadow: 
-            0 0 3px #dd00dd,
-            0 0 8px #dd00dd,
-            0 0 12px #dd00dd,
-            0 0 16px #dd00dd,
-            0 0 20px #dd00dd;
-    }
 }
 
 /* Navigation */
@@ -542,15 +651,22 @@ section {
 }
 
 .tent-features h3 {
-    color: #00cccc;
-    font-size: 1.5rem;
+    color: #00ffff;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.8rem 1.2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 204, 204, 0.2);
+    font-family: 'Orbitron', monospace;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .features-grid {
@@ -579,15 +695,22 @@ section {
 }
 
 .tent-specs h3 {
-    color: #00cccc;
-    font-size: 1.5rem;
+    color: #00ffff;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.8rem 1.2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 204, 204, 0.2);
+    font-family: 'Orbitron', monospace;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .specs-grid {
@@ -812,15 +935,22 @@ section {
 }
 
 .add-ons h3 {
-    color: #00cccc;
+    color: #00ffff;
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 1.5rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.8rem 1.2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 204, 204, 0.2);
+    font-size: 1.8rem;
+    font-family: 'Orbitron', monospace;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .addons-grid {
@@ -904,14 +1034,21 @@ section {
 }
 
 .booking-form-container h3 {
-    color: #00cccc;
-    font-size: 1.5rem;
+    color: #00ffff;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.8rem 1.2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 204, 204, 0.2);
+    font-family: 'Orbitron', monospace;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .booking-form {
@@ -964,15 +1101,22 @@ section {
 }
 
 .faq-category h3 {
-    color: #00cccc;
-    font-size: 1.3rem;
+    color: #00ffff;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.8rem 1.2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 204, 204, 0.2);
+    font-family: 'Orbitron', monospace;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .faq-item {
@@ -1058,13 +1202,20 @@ section {
 }
 
 .contact-form h4 {
-    color: #00cccc;
+    color: #00ffff;
     margin-bottom: 1.5rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.8rem 1.2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 204, 204, 0.2);
+    font-family: 'Orbitron', monospace;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .contact-form {
@@ -1162,8 +1313,13 @@ section {
     }
     
     .neon-text-big {
-        font-size: 2.5rem;
-        padding: 0.8rem 1.5rem;
+        font-size: 2.8rem;
+        padding: 1rem 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        padding: 1rem 1.8rem;
     }
     
     .hero-subtitle {
@@ -1220,12 +1376,12 @@ section {
     }
     
     .neon-text-big {
-        font-size: 2rem;
-        padding: 0.6rem 1rem;
+        font-size: 2.2rem;
+        padding: 0.8rem 1.5rem;
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
         padding: 0.8rem 1.5rem;
     }
     
